@@ -1,0 +1,7 @@
+Output:
+
+10.52.1.11
+10.52.1.12
+10.52.1.76
+
+command : nslookup 42.fr | grep "Address"

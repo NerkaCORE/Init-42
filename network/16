@@ -1,0 +1,11 @@
+En faisant : echo "46.19.122.85  intra.42.fr" >> etc/hosts,
+on ajoute la ligne au fichier ce qui donnera :
+
+cat etc/hosts:
+
+127.0.0.1		localhost
+255.255.255.255	broadcasthost
+::1				localhost
+46.19.122.85	intra.42.fr
+
+Ainsi le domaine intra.42.fr pointe bien sur l'IP.

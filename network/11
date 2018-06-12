@@ -1,0 +1,2 @@
+On peut se rendre compte sur le retour de la commande traceroute qu'apres nat-1
+les addresses IP passent de privees a publiques, on peut donc en deduire nat-1 est notre lien vers le monde exterieur et son IP est 10.60.1.11.

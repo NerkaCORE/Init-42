@@ -1,0 +1,5 @@
+Le serveur est de type dhcp.
+Il permet de distribuer une config IP aux equipements du reseau lors de chaque mise en
+service.
+
+-> nslookup

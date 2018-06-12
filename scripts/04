@@ -1,0 +1,29 @@
+#!/bin/bash
+
+TO_ADDRESS="root@localhost.com"
+SUBJECT="Check"
+BODY="The file /etc/crontab has been modified."
+
+if [ -f /42/date ]
+	then
+		lastdate=$(cat date)
+		echo Data copied.
+	else
+		lastdate="null"
+		echo No data.
+fi
+
+newdate=$(md5sum /etc/crontab | cut -d " " -f 1)
+
+if [ "$newdate" != "$lastdate" ]
+	then
+			echo The file etc/crontab has been modified.
+			echo $newdate > date
+			echo ${BODY}| mail -s ${SUBJECT} ${TO_ADDRESS}
+			echo Mail sent.
+	else
+			echo Nothing was modified.
+fi
+
+#Add this to /etc/crontab :
+# 0 0 * * * root sh 42/04

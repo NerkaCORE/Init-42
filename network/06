@@ -1,0 +1,2 @@
+Le chemin complet du fichier dans lequel est ecrit l'adresse IP du serveur DNS que
+j'utilise est /var/run/resolv.conf

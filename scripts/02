@@ -1,0 +1,8 @@
+#!/bin/bash
+
+command="/usr/bin/04/"
+job="0 4 * * 1 $command"
+( crontab -l | grep -v -F "$job" ; echo "$job" ) | crontab -
+
+apt-get update >> /var/log/update_script.log
+apt-get upgrade >> /var/log/update_script.log
